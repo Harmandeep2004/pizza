@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Order Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <h1>Welcome to Pizza Heaven</h1>
+    <img src="pizza image.jpeg" alt="image of pizza">
+
+  </header>
+
+  <!-- Main content section -->
+  <main>
+    <h2>Order Your Pizza</h2>
+    <!-- Pizza order form -->
+    <form action="confirm_order.php" method="post">
+      <!-- Number of Pizzas -->
+      <label for="quantity">Number of Pizzas:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+      <!-- Size -->
+      <fieldset>
+        <legend>Size:</legend>
+        <input type="radio" id="small" name="size" value="small" checked>
+        <label for="small">Small</label><br>
+        <input type="radio" id="medium" name="size" value="medium">
+        <label for="medium">Medium</label><br>
+        <input type="radio" id="large" name="size" value="large">
+        <label for="large">Large</label><br>
+      </fieldset><br>
+
+      <!-- Shape -->
+      <label for="shape">Shape:</label>
+      <select id="shape" name="shape">
+        <option value="round">Round</option>
+        <option value="square">Square</option>
+      </select><br><br>
+
+      <!-- Toppings -->
+      <label for="toppings">Toppings:</label><br>
+      <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label><br>
+      <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label><br>
+      <input type="checkbox" id="sausage" name="toppings[]" value="sausage">
+      <label for="sausage">Sausage</label><br>
+      <input type="checkbox" id="onions" name="toppings[]" value="onions">
+      <label for="onions">Onions</label><br>
+      <input type="checkbox" id="olives" name="toppings[]" value="olives">
+      <label for="olives">Olives</label><br><br>
+      
+
+      <!-- Crust Type -->
+      <label for="crust">Crust Type:</label><br>
+      <input type="radio" id="deep-dish" name="crust" value="deep-dish">
+      <label for="deep-dish">Deep Dish</label><br>
+      <input type="radio" id="thin-crust" name="crust" value="thin-crust">
+      <label for="thin-crust">Thin Crust</label><br><br>
+
+      <!-- Delivery Method -->
+      <label for="delivery">Delivery Method:</label><br>
+      <select id="delivery" name="delivery">
+        <option value="takeout">Take Out</option>
+        <option value="delivery">Delivery</option>
+        <option value="eat-in">Eat In</option>
+      </select><br><br>
+
+      <!-- Additional Comments -->
+      <label for="comments">Additional Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+      <!-- Contact Information -->
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br><br>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <!-- Pickup/Delivery Time -->
+      <label for="pickup-time">Preferred Pickup/Delivery Time:</label><br>
+      <input type="datetime-local" id="pickup-time" name="pickup-time"><br><br>
+
+      <!-- Submit and Reset Buttons -->
+      <input type="submit" value="Place Order">
+      <input type="reset" value="Reset Order">
+    </form>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <p>Thank you for choosing Pizza Heaven!</p>
+  </footer>
+</body>
+</html>
